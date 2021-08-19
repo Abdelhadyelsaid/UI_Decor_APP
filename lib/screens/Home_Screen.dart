@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:decor_task/screens/Login_Screen.dart';
+import 'package:decor_task/Constants/styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,17 +21,11 @@ class HomeScreen extends StatelessWidget {
                 //Text for Decor and enjoy
                 Text(
                   "Decor &",
-                  style: TextStyle(
-                      fontSize: 40.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+                  style: MyTextStyle.style_A,
                 ),
                 Text(
                   " enjoy !",
-                  style: TextStyle(
-                      fontSize: 40.0,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
+                  style: MyTextStyle.style_A,
                 ),
 
                 // Image Insert
@@ -48,11 +44,9 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-
-                  //insert Get Started button
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
-                        Colors.deepPurpleAccent),
+                        Color(0xff9ea3d2)),
                     overlayColor: MaterialStateProperty.all<Color>(Colors.grey),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -60,30 +54,18 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
+                  },
                 ),
-
-                //insert text anf sign in button
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Already have an account ?",
-                          style: TextStyle(fontSize: 20, color: Colors.black)),
-                      TextButton(
-                        onPressed: () {},
-                        child: Text(
-                          "Sign in",
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.black),
-                        ),
-                      ),
-                    ],
-                  ),
+                SizedBox(
+                  height:50.0,
                 ),
+                //insert text and sign in button
+                Row_Signin(),
               ],
             ),
           ),
