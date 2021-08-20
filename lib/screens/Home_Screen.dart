@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -45,8 +46,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xff9ea3d2)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Color(0xff9ea3d2)),
                     overlayColor: MaterialStateProperty.all<Color>(Colors.grey),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -62,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   },
                 ),
                 SizedBox(
-                  height:50.0,
+                  height: 50.0,
                 ),
                 //insert text and sign in button
                 Row_Signin(),

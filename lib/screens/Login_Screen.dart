@@ -1,12 +1,12 @@
 import 'package:decor_task/screens/Categories_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:decor_task/Constants/styles.dart';
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
 
+class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
           child: SingleChildScrollView(
         child: Center(
@@ -50,6 +50,7 @@ class LoginScreen extends StatelessWidget {
                   height: 25.0,
                 ),
                 TextField(
+                  obscureText: true,
                   decoration: InputDecoration(
                       border: OutlineInputBorder(), hintText: 'Password'),
                 ),
@@ -68,8 +69,8 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(
-                        Color(0xff9ea3d2)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Color(0xff9ea3d2)),
                     overlayColor: MaterialStateProperty.all<Color>(Colors.grey),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
@@ -80,7 +81,8 @@ class LoginScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => CategoriesScreen()),
+                      MaterialPageRoute(
+                          builder: (context) => CategoriesScreen()),
                     );
                   },
                 ),
