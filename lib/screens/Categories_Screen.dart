@@ -1,4 +1,5 @@
 import 'package:decor_task/Constants/styles.dart';
+import 'package:decor_task/screens/Details_Screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesScreen extends StatelessWidget {
@@ -33,7 +34,7 @@ class CategoriesScreen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(16.0, 0, 16, 0),
+            padding: const EdgeInsets.fromLTRB(8.0, 0, 8, 0),
             child: Column(
               children: [
                 SizedBox(
@@ -53,7 +54,7 @@ class CategoriesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 27,
+                            width: 20,
                             height: 30,
                             child: Image(
                               image: AssetImage('assets/images/icon-03.png'),
@@ -64,7 +65,7 @@ class CategoriesScreen extends StatelessWidget {
                           ),
                           Text(
                             'Price Range',
-                            style: TextStyle(color: Colors.grey, fontSize: 9.0),
+                            style: TextStyle(color: Colors.grey, fontSize: 10.0),
                           ),
                         ],
                       ),
@@ -92,7 +93,7 @@ class CategoriesScreen extends StatelessWidget {
                           Text(
                             'Tags',
                             style:
-                                TextStyle(color: Colors.grey, fontSize: 13.0),
+                                TextStyle(color: Colors.grey, fontSize: 10.0),
                           ),
                         ],
                       ),
@@ -108,7 +109,7 @@ class CategoriesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 27,
+                            width: 20,
                             height: 30,
                             child: Image(
                               image: AssetImage('assets/images/icon-03.png'),
@@ -120,14 +121,14 @@ class CategoriesScreen extends StatelessWidget {
                           Text(
                             'Style',
                             style:
-                                TextStyle(color: Colors.grey, fontSize: 13.0),
+                                TextStyle(color: Colors.grey, fontSize: 10.0),
                           ),
                         ],
                       ),
                     ),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        fixedSize: Size(90, 30),
+                        fixedSize: Size(80, 30),
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10)),
                         primary: Colors.white,
@@ -136,7 +137,7 @@ class CategoriesScreen extends StatelessWidget {
                       child: Row(
                         children: [
                           Container(
-                            width: 27,
+                            width: 20,
                             height: 30,
                             child: Image(
                               image: AssetImage('assets/images/icon-03.png'),
@@ -148,7 +149,7 @@ class CategoriesScreen extends StatelessWidget {
                           Text(
                             'Color',
                             style:
-                                TextStyle(color: Colors.grey, fontSize: 12.0),
+                                TextStyle(color: Colors.grey, fontSize: 10.0),
                           ),
                         ],
                       ),
@@ -198,7 +199,7 @@ class CategoriesScreen extends StatelessWidget {
                     Stack(
                       children: [
                         Container(
-                          width: 180,
+                          width: 175,
                           height: 320,
                           child: TextButton(
                             onPressed: () {},
@@ -244,7 +245,13 @@ class CategoriesScreen extends StatelessWidget {
                           width: 190,
                           height: 320,
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => DetailsScreen()),
+                              );
+                            },
                             child: Image(
                               image: AssetImage('assets/images/paint.jpg'),
                             ),
@@ -277,7 +284,7 @@ class CategoriesScreen extends StatelessWidget {
                     Stack(
                       children: [
                         Container(
-                          width: 180,
+                          width: 175,
                           height: 320,
                           child: TextButton(
                             onPressed: () {},
